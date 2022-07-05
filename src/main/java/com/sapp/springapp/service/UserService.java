@@ -33,13 +33,4 @@ public class UserService {
         userRepo.deleteById(id);
         return id;
     }
-
-    public String deleteUserByUsername(String username) throws UserNotFoundException {
-        UserEntity user = userRepo.findByUsername(username);
-        if (user == null) {
-            throw new UserNotFoundException("User for delete not found");
-        }
-        userRepo.delete(user);
-        return username;
-    }
 }
