@@ -1,10 +1,11 @@
 package com.sapp.springapp.model;
 
 import com.sapp.springapp.entity.TodoEntity;
-import com.sapp.springapp.service.TodoService;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-import javax.swing.text.StyledEditorKit;
-
+@Data
+@AllArgsConstructor
 public class Todo {
     private Long id;
     private String title;
@@ -19,29 +20,5 @@ public class Todo {
     }
 
     public Todo() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Boolean getCompleted() {
-        return completed;
-    }
-
-    public void setCompleted(Boolean completed) {
-        this.completed = completed;
     }
 }

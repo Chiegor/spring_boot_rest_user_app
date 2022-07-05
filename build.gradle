@@ -23,6 +23,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation('org.flywaydb:flyway-core')
+	// https://mavenlibs.com/maven/dependency/org.flywaydb.enterprise/flyway-mysql
+	implementation 'org.flywaydb.enterprise:flyway-mysql:8.5.13'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'mysql:mysql-connector-java'
@@ -38,5 +40,5 @@ flyway {
 	url = 'jdbc:mysql://${MYSQL_HOST:localhost}:3306/s_app'
 	user = 'root'
 	password = 'root'
-	locations = ['classpath:db/migration']
+	locations = 'classpath:db/migration'
 }
